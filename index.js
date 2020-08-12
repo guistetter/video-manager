@@ -4,7 +4,7 @@ const nunjucks = require('nunjucks')
 const PORT = process.env.PORT || 3000
 const server = express()
 
-server.set("view engine", "html")
+server.set("view engine", "njk")
 nunjucks.configure('views',{
   express:server
 })
@@ -12,7 +12,11 @@ nunjucks.configure('views',{
 server.use(express.static("public"))
 
 server.get('/', (req,res) => {
-  res.render('classes')
+  res.render('index')
+})
+
+server.get('/portfolio', (req,res) => {
+  res.render('portfolio')
 })
 
 server.listen(PORT, () =>{
