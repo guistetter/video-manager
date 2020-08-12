@@ -1,0 +1,36 @@
+{
+  "name": "video-manager",
+  "version": "1.0.0",
+  "description": "Praticando frontend just for fun! A simple template to video galery ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guistetter/video-manager.git"
+  },
+  "keywords": [
+    "Frontend",
+    "css-grid",
+    "nunjunks",
+    "node",
+    "express",
+    "video",
+    "galery",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guistetter/video-manager/issues"
+  },
+  "homepage": "https://github.com/guistetter/video-manager#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
