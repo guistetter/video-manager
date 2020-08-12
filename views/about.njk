@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Think View</title>
-  <link rel="stylesheet" href="/style/style.css">
-</head>
-<body>
-  <header>
-    <div class="links">
-      <a href="/">Sobre</a>
-      <a href="/portfolio">Aulas</a>
-    </div>
-  </header>
-
+{% extends "layout.njk" %}
+{%block head%}
+  <title> Sobre </title>
+ {% endblock %}
+{% block content %}
   <div id="wrapper">
     <img src="./images/imagem1.jpg" alt="Imagem de perfil">
     <h1>Benetido Alves</h1>
@@ -26,5 +15,4 @@
     <a href="#">Twitter</a>
     <a href="#">Instagram</a>
   </div>
-</body>
-</html>
+{% endblock %}
