@@ -1,5 +1,5 @@
 @font-face {
-  src: url(fonts/SourceSansPro-Regular.ttf);
+  src: url(/fonts/SourceSansPro-Regular.ttf);
   font-family: 'SourceSansPro-Regular';    
   font-weight: normal;
 } 
@@ -115,6 +115,10 @@ header{
 .card{
   background-color: var(--color-rocket);
   display: grid;
+  cursor: pointer;
+}
+.card:hover{
+  border: 1px solid var(--color-green);
 }
 
 .card_image-container img{
@@ -160,9 +164,9 @@ height: 250px;
 }
 
 .modal .close-modal{
-  color: black;
-  right: 12px;
-  top: 10px;
+  color: white;
+  right: 5px;
+  top: 5px;
   cursor: pointer;
   position: absolute;
 }
@@ -178,4 +182,19 @@ iframe{
   height: 90%;
   position: absolute;
   top:5%;
+}
+
+/* === Featured === */
+
+.card_image-container{
+position: relative;
+}
+.featured{
+position: absolute;
+background-color: #f7d05f;
+color: #111;
+padding: 2px 8px;
+left: 5px;
+border-radius: 25px;
+top: -10px;
 }
