@@ -8,96 +8,22 @@
     <h1>Aulas</h1>
   </div>
   <section class="cards">
+    {% for item in items %}
+      <div class="card" id="{{item.id}}">
+        <div class="card_image-container">
+          <img src="./images/{{item.imgName}}" alt="Imagem do curso javascript">
+        </div>
 
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem1.jpg" alt="Imagem do curso javascript">
-      </div>
+        <div class="card_content">
+          <p>{{item.title}}</p>
+        </div>
 
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
+        <div class="card_info">
+          <p>{{item.duration}}</p>
+          <p class="card_price"> {{item.price}} </p>
+        </div>
       </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
-
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem3.jpg" alt="Imagem do curso javascript">
-      </div>
-
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
-      </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
-
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem4.jpg" alt="Imagem do curso javascript">
-      </div>
-
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
-      </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
-
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem1.jpg" alt="Imagem do curso javascript">
-      </div>
-
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
-      </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
-
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem3.jpg" alt="Imagem do curso javascript">
-      </div>
-
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
-      </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
-
-    <div class="card" id="jbAh5R8CH_o">
-      <div class="card_image-container">
-        <img src="./images/imagem4.jpg" alt="Imagem do curso javascript">
-      </div>
-
-      <div class="card_content">
-        <p>Formulário animado com JS puro e Animation | kel kel</p>
-      </div>
-
-      <div class="card_info">
-        <p>57 min</p>
-        <p class="card_price"> Free </p>
-      </div>
-    </div>
+    {% endfor %}
   </section>
 
   <div class="modal-overlay">
