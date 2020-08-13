@@ -12,6 +12,9 @@
       <div class="card" id="{{item.id}}">
         <div class="card_image-container">
           <img src="./images/{{item.imgName}}" alt="Imagem do curso javascript">
+          {%if item.featured %}
+            <div class="featured">Featured</div>
+          {%endif%}
         </div>
 
         <div class="card_content">
