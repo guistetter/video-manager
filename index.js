@@ -35,15 +35,15 @@ server.get('/portfolio', (req,res) => {
 
 server.get('/video', (req,res) => {
   const id = req.query.id 
-  
+
   const video = videos.find(function(video){
-      if(video.id == id){
-        return true;
-      }
+    return video.id == id
   })
+
   if(!video){
     return res.send('video nao encontrado')
   }
+  
   return res.render('video',{video})
 })
 
