@@ -13,7 +13,18 @@ nunjucks.configure('views',{
 server.use(express.static("public"))
 
 server.get('/', (req,res) => {
-  res.render('about')
+  const about = {
+    img_name: "imagem2.jpg",
+    name: "Guilherme Stetter",
+    role: "Bug Maker and Pusher",
+    description: "Colaborar na blablablblablablabla",
+    links:[
+      {name: "GitHub", url:"https://google.com.br"},
+      {name: "Twitter", url:"https://google.com.br"},
+      {name: "Facebook", url:"https://google.com.br"},
+    ]
+  }
+  res.render('about', {about})
 })
 
 server.get('/portfolio', (req,res) => {
