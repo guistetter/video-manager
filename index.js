@@ -33,6 +33,20 @@ server.get('/portfolio', (req,res) => {
   res.render('portfolio',{items: videos})
 })
 
+server.get('/video', (req,res) => {
+  const id = req.query.id 
+  
+  const video = videos.find(function(video){
+      if(video.id == id){
+        return true;
+      }
+  })
+  if(!video){
+    return res.send('video nao encontrado')
+  }
+  return res.render('video',{video})
+})
+
 server.listen(PORT, () =>{
   console.log('running PORT: ', PORT)
 })
