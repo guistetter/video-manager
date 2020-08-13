@@ -1,18 +1,18 @@
 {% extends "layout.njk" %}
 {%block head%}
-  <title> Sobre </title>
+  <title> Sobre - {{about.name}} </title>
  {% endblock %}
 {% block content %}
   <div id="wrapper">
-    <img src="./images/imagem1.jpg" alt="Imagem de perfil">
-    <h1>Benetido Alves</h1>
-    <h2>Catolico - Maconheiro</h2>
-    <p>Quieto mas as vezes maloqueiro, confuso mas centrado <a href="https://www.google.com.br" target="_blank">Ajuda</a></p>
+    <img src="./images/{{about.img_name}}" alt="Imagem de perfil">
+    <h1>{{about.name}}</h1>
+    <h2>{{about.role}}</h2>
+    <p>{{about.description}}</p>
   </div>
 
   <div id="links-footer" class="links">
-    <a href="#">Facebook</a>
-    <a href="#">Twitter</a>
-    <a href="#">Instagram</a>
+    {% for link in about.links %}
+    <a href="{{link.url}}" target="_blank">{{ link.name }}</a>
+    {% endfor %}
   </div>
 {% endblock %}
