@@ -7,7 +7,9 @@ const videos = require('./data')
 
 server.set("view engine", "njk")
 nunjucks.configure('views',{
-  express:server
+  express:server,
+  noCache: true,
+  autoescape: false
 })
 
 server.use(express.static("public"))
