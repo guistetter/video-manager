@@ -3,7 +3,8 @@ module.exports = [{
   imgName:"imagem1.jpg",
   title: "Aprendendo SQL SERVER do Basico ao Avancado",
   duration: "57 min",
-  price: "Free"
+  price: "Free",
+  featured: true
   },
   {
   id: "jbAh5R8CH_o",
@@ -37,6 +38,7 @@ module.exports = [{
   imgName:"imagem2.jpg",
   title: "Formulário animado com JS puro e Animation | kel kel",
   duration: "57 min",
-  price: "Free"
+  price: "Free",
+  featured: true
   }
 ]
